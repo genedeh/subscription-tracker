@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+ "scripts": {
+  "build": "tsc",
+  "start": "node dist/app.js",
+  "dev": "nodemon --watch src --exec ts-node src/app.ts"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,8 +20,16 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^1.0.1",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/debug": "^4.1.12",
+    "@types/express": "^5.0.6",
+    "@types/mongodb": "^4.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.3.0",
     "eslint": "^10.0.0",
     "globals": "^17.3.0",
-    "nodemon": "^3.1.13"
+    "nodemon": "^3.1.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
